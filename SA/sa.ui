@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SAClass</class>
+ <widget class="QMainWindow" name="SAClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Scheduling Algorithms Calculator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTableWidget" name="mainTable">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>620</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Job</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Lenght</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FCFS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>RR</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>SJF</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MLFQ</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="lay_params">
+      <item>
+       <layout class="QVBoxLayout" name="lay_slice">
+        <item>
+         <widget class="QLabel" name="lblContextChange">
+          <property name="text">
+           <string>Change of context</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtContextChange">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSliceRr">
+          <property name="text">
+           <string>Slice for Round Robin</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtSliceRr">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblQueuesMlfq">
+          <property name="text">
+           <string>Queues for MLFQ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tblQueueMlfq">
+          <property name="maximumSize">
+           <size>
+            <width>152</width>
+            <height>150</height>
+           </size>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>73</number>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>10</number>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Priority</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Slice</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRemoveQueue">
+          <property name="text">
+           <string>Remove queue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAddQueue">
+          <property name="text">
+           <string>Add queue</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRemoveJob">
+        <property name="minimumSize">
+         <size>
+          <width>154</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Remove job</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAddJob">
+        <property name="minimumSize">
+         <size>
+          <width>154</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Add job</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="calcular">
+        <property name="minimumSize">
+         <size>
+          <width>154</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Calcular</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="sa.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnAddJob</sender>
+   <signal>clicked()</signal>
+   <receiver>SAClass</receiver>
+   <slot>addJob()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calcular</sender>
+   <signal>clicked()</signal>
+   <receiver>SAClass</receiver>
+   <slot>calcular()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddQueue</sender>
+   <signal>clicked()</signal>
+   <receiver>SAClass</receiver>
+   <slot>addQueue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRemoveJob</sender>
+   <signal>clicked()</signal>
+   <receiver>SAClass</receiver>
+   <slot>removeJob()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRemoveQueue</sender>
+   <signal>clicked()</signal>
+   <receiver>SAClass</receiver>
+   <slot>removeQueue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
